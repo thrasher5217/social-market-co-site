@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Event Consultation — The Social Market Co.</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .consultation-section {
+      padding: 60px 25px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .consultation-heading {
+      font-family: 'ivar-regular', serif;
+      font-size: 2.8rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    .consultation-subtext {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 48px;
+    }
+
+    .scheduler-wrapper {
+      width: 100%;
+      min-height: 700px;
+      border: none;
+    }
+
+    .scheduler-wrapper iframe {
+      width: 100%;
+      height: 750px;
+      border: none;
+      display: block;
+    }
+
+    @media screen and (max-width: 543px) {
+      .consultation-heading {
+        font-size: 2rem;
+      }
+      .scheduler-wrapper iframe {
+        height: 900px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html" class="logo-typewriter-link"><span id="typewriter-text" class="logo-typewriter"></span><span class="logo-cursor">_</span></a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="events.html">Upcoming Events</a></li>
+          <li><a href="vendor-signup.html">Vendor Applications</a></li>
+          <li><a href="consultation.html" class="nav-active">Event Consultation</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="consultation-section">
+      <h1 class="consultation-heading">Event Consultation</h1>
+      <p class="consultation-subtext">Book a time to chat about your next event.</p>
+      <div class="scheduler-wrapper">
+        <iframe
+          src="https://companyname387770.hbportal.co/schedule/69a09dc15001c00023513211"
+          title="Schedule an Event Consultation"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/coricorinne/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/cori-corinne-2aaa9261/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.behance.net/coricorinn3714" target="_blank" rel="noopener">Behance</a>
+        <span class="copyright">©2025</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/typewriter.js?v=2"></script>
+</body>
+</html>
