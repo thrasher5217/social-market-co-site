@@ -123,7 +123,8 @@ main {
 
 /* Photos with centered overlay logo */
 .photos-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
   line-height: 0;
   position: relative;
