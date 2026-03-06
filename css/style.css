@@ -47,8 +47,7 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  background-color: #f6f5f0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(246, 245, 240, 0);
 }
 
 .navbar-inner {
@@ -123,8 +122,7 @@ main {
 
 /* Photos with centered overlay logo */
 .photos-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   width: 100%;
   line-height: 0;
   position: relative;
@@ -252,7 +250,7 @@ footer {
 
 @media screen and (max-width: 543px) {
   .photos-section {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   .photos-section .photo {
     width: 100%;
