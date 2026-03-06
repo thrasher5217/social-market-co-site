@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Contact — The Social Market Co.</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .contact-section {
+      padding: 60px 25px 80px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-heading {
+      font-family: 'ivar-regular', serif;
+      font-size: 2.8rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    .contact-subtext {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 48px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #000;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      padding: 10px 0;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-bottom-color: #000;
+    }
+
+    .form-group textarea {
+      resize: none;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      margin-top: 12px;
+    }
+
+    .form-submit button {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: #000;
+      border: none;
+      padding: 14px 36px;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .form-submit button:hover {
+      opacity: 0.7;
+    }
+
+    @media screen and (max-width: 543px) {
+      .contact-heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html" class="logo-typewriter-link"><span id="typewriter-text" class="logo-typewriter"></span><span class="logo-cursor">_</span></a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="events.html">Upcoming Events</a></li>
+          <li><a href="vendor-signup.html">Vendor Applications</a></li>
+          <li><a href="consultation.html">Event Consultation</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html" class="nav-active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1 class="contact-heading">Contact</h1>
+      <p class="contact-subtext">Have a question or want to work together? Send us a message.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/coricorinne/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/cori-corinne-2aaa9261/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.behance.net/coricorinn3714" target="_blank" rel="noopener">Behance</a>
+        <span class="copyright">©2025</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/typewriter.js?v=2"></script>
+</body>
+</html>
