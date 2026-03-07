@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Services offered by The Social Market Collective — event planning, marketing, branding, and more for small businesses in Chicagoland.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Services — The Social Market Co.</title>
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <style>
+    .services-section {
+      padding: 60px 25px 80px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .services-heading {
+      font-family: 'ivar-regular', serif;
+      font-size: 2.8rem;
+      font-weight: normal;
+      margin-bottom: 16px;
+      color: #000;
+    }
+
+    .services-intro {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    .service-item {
+      margin-bottom: 0;
+    }
+
+    .service-item + .service-item {
+      padding-top: 44px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .service-item:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .service-divider {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin: 0 0 44px;
+    }
+
+    .service-title {
+      font-family: 'ivar-regular', serif;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .service-body {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .service-includes-label {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .service-list li {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.93rem;
+      color: #333;
+      padding-left: 1.2em;
+      position: relative;
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+
+    .service-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: #aaa;
+    }
+
+    .service-price {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.88rem;
+      color: #000;
+      margin-top: 14px;
+    }
+
+    .service-note {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 6px;
+    }
+
+    .services-cta {
+      margin-top: 60px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .services-cta p {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .cta-btn:hover {
+      background-color: #222;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 543px) {
+      .services-heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html" class="logo-typewriter-link"><span id="typewriter-text" class="logo-typewriter"></span><span class="logo-cursor">_</span></a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Upcoming Events</a></li>
+          <li><a href="past-events.html">Past Events</a></li>
+          <li><a href="vendor-signup.html">Vendor Applications</a></li>
+          <li><a href="services.html" class="nav-active">Services</a></li>
+          <li><a href="consultation.html">Event Consultation</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-section">
+      <h1 class="services-heading">Services</h1>
+      <p class="services-intro">The Social Market Collective offers creative and strategic services designed to help businesses grow, attract customers, and host successful events.</p>
+
+      <hr class="service-divider">
+
+      <!-- Event Planning & Production -->
+      <div class="service-item">
+        <h2 class="service-title">Event Planning & Production</h2>
+        <p class="service-body">From concept to execution, we help businesses plan engaging events that drive foot traffic and create memorable experiences.</p>
+        <p class="service-includes-label">Includes</p>
+        <ul class="service-list">
+          <li>Event concept and strategy</li>
+          <li>Vendor coordination</li>
+          <li>Event layout planning</li>
+          <li>Marketing support</li>
+          <li>Day-of event coordination</li>
+        </ul>
+        <p class="service-price">Starting at $350</p>
+      </div>
+
+      <!-- Event Strategy Consultation -->
+      <div class="service-item">
+        <h2 class="service-title">Event Strategy Consultation</h2>
+        <p class="service-body">Perfect for businesses that want guidance before planning their event.</p>
+        <p class="service-includes-label">Includes</p>
+        <ul class="service-list">
+          <li>Event planning strategy</li>
+          <li>Marketing ideas to increase attendance</li>
+          <li>Vendor and sponsorship suggestions</li>
+          <li>Event growth recommendations</li>
+        </ul>
+        <p class="service-price">Starting at $75</p>
+        <p class="service-note">Free 30-minute discovery call available.</p>
+      </div>
+
+      <!-- Marketing & Promotional Graphics -->
+      <div class="service-item">
+        <h2 class="service-title">Marketing & Promotional Graphics</h2>
+        <p class="service-body">Professional graphics designed to promote your event or business.</p>
+        <p class="service-includes-label">Includes</p>
+        <ul class="service-list">
+          <li>Event flyers</li>
+          <li>Social media promotional graphics</li>
+          <li>Vendor recruitment graphics</li>
+        </ul>
+        <p class="service-price">Starting at $40 per design</p>
+      </div>
+
+      <!-- Paid Advertising Campaign Setup -->
+      <div class="service-item">
+        <h2 class="service-title">Paid Advertising Campaign Setup</h2>
+        <p class="service-body">Targeted advertising to increase visibility and drive traffic to your event or business.</p>
+        <p class="service-includes-label">Includes</p>
+        <ul class="service-list">
+          <li>Facebook & Instagram ad setup</li>
+          <li>Audience targeting</li>
+          <li>Campaign strategy</li>
+          <li>Ad creative design</li>
+        </ul>
+        <p class="service-price">Starting at $125</p>
+        <p class="service-note">Ad spend is separate.</p>
+      </div>
+
+      <!-- Logo & Small Business Branding -->
+      <div class="service-item">
+        <h2 class="service-title">Logo & Small Business Branding</h2>
+        <p class="service-body">Professional branding to help your business stand out.</p>
+        <p class="service-includes-label">Includes</p>
+        <ul class="service-list">
+          <li>Custom logo design</li>
+          <li>Brand color palette guidance</li>
+          <li>Social media profile graphics</li>
+        </ul>
+        <p class="service-price">Starting at $150</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="services-cta">
+        <p>Book your free 30-minute discovery call today to discuss your project or event.</p>
+        <a href="consultation.html" class="cta-btn">Book a Discovery Call</a>
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/thesocialmarketco/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/p/The-Social-Market-Co-Events-61582446278117/" target="_blank" rel="noopener">Facebook</a>
+        <span class="copyright">©2025</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/typewriter.js?v=3"></script>
+</body>
+</html>
