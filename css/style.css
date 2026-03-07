@@ -180,17 +180,17 @@ footer {
 }
 
 .footer-credit {
-  border-top: 1px solid rgba(0,0,0,0.12);
-  padding: 10px 0;
   font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.72rem;
-  color: #aaa;
-  text-align: center;
+  font-size: 0.62rem;
+  color: #bbb;
+  text-align: right;
+  padding: 4px 0 8px;
 }
 
 .footer-credit a {
-  color: #aaa;
+  color: #bbb;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-credit a:hover {
