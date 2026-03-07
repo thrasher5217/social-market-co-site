@@ -317,17 +317,40 @@ footer {
   gap: 16px;
   width: 300px;
   flex-shrink: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.015));
-  border-top: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  font-family: 'ivar-regular', serif;
+  font-size: 120px;
+  color: #e8ddd0;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonial-stars {
+  color: #c4933f;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: -4px;
 }
 
 .testimonial-avatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #000;
-  color: #f6f5f0;
+  background: #c9a99a;
+  color: #fff;
   font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
