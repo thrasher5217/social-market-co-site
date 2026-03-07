@@ -153,8 +153,7 @@ main {
 /* ─── FOOTER ─── */
 footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 0 25px;
 }
 
@@ -178,6 +177,24 @@ footer {
 
 .footer-links .copyright {
   margin-left: auto;
+}
+
+.footer-credit {
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding: 10px 0;
+  font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer-credit a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  color: #000;
 }
 
 /* ─── HAMBURGER ─── */
