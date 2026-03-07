@@ -9,7 +9,7 @@
   <style>
     .services-section {
       padding: 60px 25px 80px;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -17,117 +17,128 @@
       font-family: 'ivar-regular', serif;
       font-size: 2.8rem;
       font-weight: normal;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       color: #000;
     }
 
     .services-intro {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 0.95rem;
-      color: #555;
+      color: #666;
       line-height: 1.75;
       margin-bottom: 48px;
     }
 
     .service-item {
-      margin-bottom: 0;
-    }
-
-    .service-item + .service-item {
-      padding-top: 44px;
+      display: grid;
+      grid-template-columns: 1fr 140px;
+      gap: 32px;
+      align-items: start;
+      padding: 40px 0;
       border-top: 1px solid rgba(0,0,0,0.1);
     }
 
-    .service-item:first-of-type {
-      padding-top: 0;
-      border-top: none;
+    .service-item:last-of-type {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
-    .service-divider {
-      border: none;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      margin: 0 0 44px;
-    }
+    .service-main {}
 
     .service-title {
       font-family: 'ivar-regular', serif;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: normal;
       color: #000;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .service-body {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.95rem;
-      color: #333;
+      font-size: 0.9rem;
+      color: #555;
       line-height: 1.75;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .service-includes-label {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: #888;
+      letter-spacing: 0.08em;
+      color: #999;
       margin-bottom: 8px;
     }
 
     .service-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 16px;
+      margin: 0;
     }
 
     .service-list li {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.93rem;
-      color: #333;
-      padding-left: 1.2em;
+      font-size: 0.88rem;
+      color: #444;
+      padding-left: 1em;
       position: relative;
-      margin-bottom: 4px;
-      line-height: 1.6;
+      margin-bottom: 5px;
+      line-height: 1.55;
     }
 
     .service-list li::before {
-      content: '·';
+      content: '–';
       position: absolute;
       left: 0;
-      color: #aaa;
+      color: #bbb;
+    }
+
+    .service-pricing {
+      text-align: right;
+      padding-top: 4px;
     }
 
     .service-price {
-      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.88rem;
+      font-family: 'ivar-regular', serif;
+      font-size: 1.15rem;
+      font-weight: normal;
       color: #000;
-      margin-top: 14px;
+      display: block;
+    }
+
+    .service-price-label {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      display: block;
+      margin-bottom: 4px;
     }
 
     .service-note {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 6px;
+      font-size: 0.78rem;
+      color: #999;
+      margin-top: 8px;
+      line-height: 1.5;
     }
 
     .services-cta {
-      margin-top: 60px;
-      padding-top: 48px;
-      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-top: 52px;
+      text-align: center;
     }
 
     .services-cta p {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 0.95rem;
-      color: #333;
+      color: #444;
       margin-bottom: 20px;
       line-height: 1.75;
     }
 
     .cta-btn {
       display: inline-block;
-      padding: 12px 30px;
+      padding: 12px 32px;
       background-color: #000;
       color: #fff;
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -143,9 +154,22 @@
       color: #fff;
     }
 
-    @media screen and (max-width: 543px) {
+    @media screen and (max-width: 600px) {
       .services-heading {
         font-size: 2rem;
+      }
+
+      .service-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 32px 0;
+      }
+
+      .service-pricing {
+        text-align: left;
+        padding-top: 0;
+        border-top: 1px solid rgba(0,0,0,0.07);
+        padding-top: 16px;
       }
     }
   </style>
@@ -180,77 +204,100 @@
       <h1 class="services-heading">Services</h1>
       <p class="services-intro">The Social Market Collective offers creative and strategic services designed to help businesses grow, attract customers, and host successful events.</p>
 
-      <hr class="service-divider">
-
       <!-- Event Planning & Production -->
       <div class="service-item">
-        <h2 class="service-title">Event Planning & Production</h2>
-        <p class="service-body">From concept to execution, we help businesses plan engaging events that drive foot traffic and create memorable experiences.</p>
-        <p class="service-includes-label">Includes</p>
-        <ul class="service-list">
-          <li>Event concept and strategy</li>
-          <li>Vendor coordination</li>
-          <li>Event layout planning</li>
-          <li>Marketing support</li>
-          <li>Day-of event coordination</li>
-        </ul>
-        <p class="service-price">Starting at $350</p>
+        <div class="service-main">
+          <h2 class="service-title">Event Planning & Production</h2>
+          <p class="service-body">From concept to execution, we help businesses plan engaging events that drive foot traffic and create memorable experiences.</p>
+          <p class="service-includes-label">Includes</p>
+          <ul class="service-list">
+            <li>Event concept and strategy</li>
+            <li>Vendor coordination</li>
+            <li>Event layout planning</li>
+            <li>Marketing support</li>
+            <li>Day-of event coordination</li>
+          </ul>
+        </div>
+        <div class="service-pricing">
+          <span class="service-price-label">Starting at</span>
+          <span class="service-price">$350</span>
+        </div>
       </div>
 
       <!-- Event Strategy Consultation -->
       <div class="service-item">
-        <h2 class="service-title">Event Strategy Consultation</h2>
-        <p class="service-body">Perfect for businesses that want guidance before planning their event.</p>
-        <p class="service-includes-label">Includes</p>
-        <ul class="service-list">
-          <li>Event planning strategy</li>
-          <li>Marketing ideas to increase attendance</li>
-          <li>Vendor and sponsorship suggestions</li>
-          <li>Event growth recommendations</li>
-        </ul>
-        <p class="service-price">Starting at $75</p>
-        <p class="service-note">Free 30-minute discovery call available.</p>
+        <div class="service-main">
+          <h2 class="service-title">Event Strategy Consultation</h2>
+          <p class="service-body">Perfect for businesses that want guidance before planning their event.</p>
+          <p class="service-includes-label">Includes</p>
+          <ul class="service-list">
+            <li>Event planning strategy</li>
+            <li>Marketing ideas to increase attendance</li>
+            <li>Vendor and sponsorship suggestions</li>
+            <li>Event growth recommendations</li>
+          </ul>
+        </div>
+        <div class="service-pricing">
+          <span class="service-price-label">Starting at</span>
+          <span class="service-price">$75</span>
+          <p class="service-note">Free 30-min discovery call available.</p>
+        </div>
       </div>
 
       <!-- Marketing & Promotional Graphics -->
       <div class="service-item">
-        <h2 class="service-title">Marketing & Promotional Graphics</h2>
-        <p class="service-body">Professional graphics designed to promote your event or business.</p>
-        <p class="service-includes-label">Includes</p>
-        <ul class="service-list">
-          <li>Event flyers</li>
-          <li>Social media promotional graphics</li>
-          <li>Vendor recruitment graphics</li>
-        </ul>
-        <p class="service-price">Starting at $40 per design</p>
+        <div class="service-main">
+          <h2 class="service-title">Marketing & Promotional Graphics</h2>
+          <p class="service-body">Professional graphics designed to promote your event or business.</p>
+          <p class="service-includes-label">Includes</p>
+          <ul class="service-list">
+            <li>Event flyers</li>
+            <li>Social media promotional graphics</li>
+            <li>Vendor recruitment graphics</li>
+          </ul>
+        </div>
+        <div class="service-pricing">
+          <span class="service-price-label">Starting at</span>
+          <span class="service-price">$40 / design</span>
+        </div>
       </div>
 
       <!-- Paid Advertising Campaign Setup -->
       <div class="service-item">
-        <h2 class="service-title">Paid Advertising Campaign Setup</h2>
-        <p class="service-body">Targeted advertising to increase visibility and drive traffic to your event or business.</p>
-        <p class="service-includes-label">Includes</p>
-        <ul class="service-list">
-          <li>Facebook & Instagram ad setup</li>
-          <li>Audience targeting</li>
-          <li>Campaign strategy</li>
-          <li>Ad creative design</li>
-        </ul>
-        <p class="service-price">Starting at $125</p>
-        <p class="service-note">Ad spend is separate.</p>
+        <div class="service-main">
+          <h2 class="service-title">Paid Advertising Campaign Setup</h2>
+          <p class="service-body">Targeted advertising to increase visibility and drive traffic to your event or business.</p>
+          <p class="service-includes-label">Includes</p>
+          <ul class="service-list">
+            <li>Facebook & Instagram ad setup</li>
+            <li>Audience targeting</li>
+            <li>Campaign strategy</li>
+            <li>Ad creative design</li>
+          </ul>
+        </div>
+        <div class="service-pricing">
+          <span class="service-price-label">Starting at</span>
+          <span class="service-price">$125</span>
+          <p class="service-note">Ad spend is separate.</p>
+        </div>
       </div>
 
       <!-- Logo & Small Business Branding -->
       <div class="service-item">
-        <h2 class="service-title">Logo & Small Business Branding</h2>
-        <p class="service-body">Professional branding to help your business stand out.</p>
-        <p class="service-includes-label">Includes</p>
-        <ul class="service-list">
-          <li>Custom logo design</li>
-          <li>Brand color palette guidance</li>
-          <li>Social media profile graphics</li>
-        </ul>
-        <p class="service-price">Starting at $150</p>
+        <div class="service-main">
+          <h2 class="service-title">Logo & Small Business Branding</h2>
+          <p class="service-body">Professional branding to help your business stand out.</p>
+          <p class="service-includes-label">Includes</p>
+          <ul class="service-list">
+            <li>Custom logo design</li>
+            <li>Brand color palette guidance</li>
+            <li>Social media profile graphics</li>
+          </ul>
+        </div>
+        <div class="service-pricing">
+          <span class="service-price-label">Starting at</span>
+          <span class="service-price">$150</span>
+        </div>
       </div>
 
       <!-- CTA -->
