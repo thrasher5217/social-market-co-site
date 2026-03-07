@@ -48,6 +48,11 @@ header {
   display: flex;
   align-items: center;
   background-color: rgba(246, 245, 240, 0);
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(246, 245, 240, 0.97);
 }
 
 .navbar-inner {

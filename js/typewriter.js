@@ -1,3 +1,12 @@
+// Sticky nav background on scroll
+(function () {
+  var header = document.querySelector('header');
+  if (!header) return;
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+})();
+
 // Hamburger menu toggle
 (function () {
   var btn = document.getElementById("hamburger");
