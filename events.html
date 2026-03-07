@@ -47,44 +47,6 @@
       display: block;
     }
 
-    .giveback-body {
-      max-width: 720px;
-      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.95rem;
-      color: #333;
-      line-height: 1.8;
-    }
-
-    .giveback-body p {
-      margin-bottom: 1.3em;
-    }
-
-    .giveback-body h2 {
-      font-family: 'ivar-regular', serif;
-      font-size: 1.6rem;
-      font-weight: normal;
-      color: #000;
-      margin: 2em 0 0.6em;
-    }
-
-    .giveback-body h3 {
-      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.88rem;
-      font-weight: normal;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #000;
-      margin: 1.6em 0 0.4em;
-    }
-
-    .giveback-body a {
-      color: #000;
-      text-decoration: underline;
-    }
-
-    .giveback-body a:hover {
-      opacity: 0.6;
-    }
   </style>
 </head>
 <body>
@@ -103,6 +65,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="consultation.html">Event Consultation</a></li>
           <li><a href="careers.html">Careers</a></li>
+          <li><a href="giveback.html">Giveback</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -119,7 +82,6 @@
       <div class="events-toggle">
         <button class="toggle-btn active" id="btn-upcoming" onclick="showTab('upcoming')">Upcoming</button>
         <button class="toggle-btn" id="btn-previous" onclick="showTab('previous')">Previous</button>
-        <button class="toggle-btn" id="btn-giveback" onclick="showTab('giveback')">Giveback</button>
       </div>
 
       <!-- Upcoming Events -->
@@ -392,34 +354,6 @@
         </div>
       </div>
 
-      <!-- Giveback -->
-      <div class="events-panel" id="panel-giveback">
-        <div class="giveback-body">
-          <p>At The Social Market Collective, community impact is at the heart of everything we do. While our events are designed to support small businesses and create vibrant shopping experiences, we also believe strongly in using our platform to uplift organizations that serve our community.</p>
-          <p>Through our markets and community partnerships, we have proudly supported several initiatives focused on helping families, children, and women in need throughout our region.</p>
-
-          <h2>Organizations We've Partnered With</h2>
-
-          <h3>Toys for Tots – November 2025</h3>
-          <p>During The Merry Makers Expo, our community came together to support children during the holiday season. Thanks to the generosity of our attendees and vendors, we collected over 500 toys to be donated to local families through the Toys for Tots program.</p>
-
-          <h3>Keeping Families Covered – December 2025</h3>
-          <p>At our Santa's Winter Wonderland Market (December 20, 2025), we hosted a diaper drive benefiting Keeping Families Covered. Together, our community helped collect over 1,400 diapers to support families experiencing diaper insecurity.</p>
-
-          <h3>QUEEN Crowns &amp; Care – February 15, 2026</h3>
-          <p>At our Galentine's Day Market, we partnered with Miss Lindenhurst Milley Leyva and her platform QUEEN Crowns &amp; Care to host a women's health drive. Through the generosity of our community, we collected over 500 essential women's hygiene products to help support individuals in need.</p>
-
-          <h2>Supporting Local Nonprofits</h2>
-          <p>As part of our mission to give back, The Social Market Collective welcomes up to two registered nonprofit organizations at each event free of charge to host an informational table and connect with the community.</p>
-          <p>In addition, many of our events feature a dedicated nonprofit event partner, where we collaborate on donation drives, awareness initiatives, or fundraising opportunities to further support their cause.</p>
-
-          <h2>Our Ongoing Commitment</h2>
-          <p>Giving back will always remain a meaningful part of our mission. Through future events, we look forward to continuing partnerships with nonprofit organizations and community leaders who are working to create positive change.</p>
-          <p>If your nonprofit organization is interested in partnering with us at an upcoming event, we would love to connect.</p>
-          <a href="contact.html" class="event-btn" style="display:inline-block; margin-top: 0.4em;">Contact Us</a>
-        </div>
-      </div>
-
     </section>
 
     <footer>
@@ -434,16 +368,15 @@
   <script src="js/typewriter.js?v=4"></script>
   <script>
     function showTab(tab) {
-      ['upcoming', 'previous', 'giveback'].forEach(function(t) {
-        document.getElementById('panel-' + t).classList.toggle('active', tab === t);
-        document.getElementById('btn-' + t).classList.toggle('active', tab === t);
-      });
-      history.replaceState(null, '', tab === 'upcoming' ? '#upcoming' : '#' + tab);
+      document.getElementById('panel-upcoming').classList.toggle('active', tab === 'upcoming');
+      document.getElementById('panel-previous').classList.toggle('active', tab === 'previous');
+      document.getElementById('btn-upcoming').classList.toggle('active', tab === 'upcoming');
+      document.getElementById('btn-previous').classList.toggle('active', tab === 'previous');
+      history.replaceState(null, '', tab === 'previous' ? '#previous' : '#upcoming');
     }
 
     // Respect hash on load
-    var hash = window.location.hash.replace('#', '');
-    if (hash === 'previous' || hash === 'giveback') showTab(hash);
+    if (window.location.hash === '#previous') showTab('previous');
   </script>
 </body>
 </html>
