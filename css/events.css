@@ -84,7 +84,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   transition: opacity 0.2s ease;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .event-btn:hover {
