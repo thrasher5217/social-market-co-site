@@ -183,8 +183,10 @@ footer {
   font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.62rem;
   color: #bbb;
-  text-align: right;
-  padding: 4px 0 8px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding: 8px 0;
+  width: 100%;
 }
 
 .footer-credit a {
