@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Join The Social Market Co. team. Career opportunities coming soon.">
+  <meta name="description" content="Career opportunities at The Social Market Collective Events. Join our team in Chicagoland.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Careers — The Social Market Co.</title>
   <link rel="stylesheet" href="css/style.css?v=6">
   <style>
     .careers-section {
       padding: 60px 25px 80px;
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
@@ -17,19 +17,251 @@
       font-family: 'ivar-regular', serif;
       font-size: 2.8rem;
       font-weight: normal;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       color: #000;
     }
 
-    .careers-subtext {
+    .careers-intro {
       font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 0.95rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 52px;
+    }
+
+    .job-listing {
+      margin-bottom: 52px;
+    }
+
+    .job-listing + .job-listing {
+      padding-top: 48px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .job-title {
+      font-family: 'ivar-regular', serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .job-meta {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.8rem;
       color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .job-body {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    .job-body p {
+      margin-bottom: 1.2em;
+    }
+
+    .job-body h3 {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #000;
+      margin: 1.8em 0 0.6em;
+    }
+
+    .job-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1em;
+    }
+
+    .job-body ul li {
+      padding-left: 1.2em;
+      position: relative;
+      margin-bottom: 0.4em;
+    }
+
+    .job-body ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: #aaa;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 11px 28px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border: none;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+
+    .apply-btn:hover {
+      background-color: #222;
+    }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 200;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .modal {
+      background: #f6f5f0;
+      border-radius: 4px;
+      padding: 40px;
+      width: 100%;
+      max-width: 580px;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #888;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #000;
+    }
+
+    .modal-title {
+      font-family: 'ivar-regular', serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      margin-bottom: 6px;
+      color: #000;
+    }
+
+    .modal-subtitle {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,0.18);
+      border-radius: 2px;
+      background: #fff;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.9rem;
+      color: #000;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #000;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 16px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 13px;
+      background: #000;
+      color: #fff;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.15s;
+    }
+
+    .form-submit:hover {
+      background: #222;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0 8px;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.7;
     }
 
     @media screen and (max-width: 543px) {
       .careers-heading {
         font-size: 2rem;
+      }
+
+      .modal {
+        padding: 28px 20px;
+      }
+
+      .form-row {
+        flex-direction: column;
+        gap: 0;
       }
     }
   </style>
@@ -61,8 +293,81 @@
 
   <main>
     <section class="careers-section">
-      <h1 class="careers-heading">Careers</h1>
-      <p class="careers-subtext">Coming soon.</p>
+      <h1 class="careers-heading">Careers at The Social Market Collective</h1>
+      <p class="careers-intro">We're always looking for organized, positive, and community-minded individuals who love supporting small businesses and helping bring events to life. If you thrive in fast-paced environments and enjoy working with local entrepreneurs, we would love to hear from you.</p>
+
+      <!-- Job 1 -->
+      <div class="job-listing">
+        <h2 class="job-title">Event Support Team Member</h2>
+        <p class="job-meta">Part-Time / Event-Based &nbsp;·&nbsp; Chicagoland Area</p>
+        <div class="job-body">
+          <p>The Social Market Collective is seeking dependable and enthusiastic Event Support Team Members to assist with the execution of our artisan markets, pop-up events, and community showcases. This role is perfect for someone who enjoys working with people, staying organized, and being part of a high-energy event environment.</p>
+
+          <h3>Responsibilities</h3>
+          <ul>
+            <li>Assist with vendor check-in and registration upon arrival</li>
+            <li>Help direct vendors to their assigned booth spaces</li>
+            <li>Support table and layout setup according to the event floor plan</li>
+            <li>Assist with event signage placement and check-in station setup</li>
+            <li>Help answer vendor and guest questions throughout the event</li>
+            <li>Ensure vendor spaces remain organized and compliant with event guidelines</li>
+            <li>Support crowd flow and general guest assistance</li>
+            <li>Assist with event breakdown and cleanup at the end of the event</li>
+            <li>Communicate with the event coordinator regarding any issues or needs</li>
+          </ul>
+
+          <h3>Qualifications</h3>
+          <ul>
+            <li>Friendly and professional communication skills</li>
+            <li>Strong organizational skills and attention to detail</li>
+            <li>Ability to work in a fast-paced event environment</li>
+            <li>Ability to lift up to 30 lbs (tables, signage, supplies)</li>
+            <li>Reliable transportation to event locations</li>
+            <li>Weekend availability</li>
+          </ul>
+
+          <h3>Ideal Candidate</h3>
+          <p>This position is ideal for someone who enjoys being part of the local small business community and wants hands-on experience working behind the scenes at large community events.</p>
+        </div>
+        <button class="apply-btn" onclick="openModal('Event Support Team Member')">Apply Now</button>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="job-listing">
+        <h2 class="job-title">Personal Assistant</h2>
+        <p class="job-meta">Part-Time &nbsp;·&nbsp; Hybrid (Remote + Event Days)</p>
+        <div class="job-body">
+          <p>The Social Market Collective and Beaded For You Co. are looking for a highly organized Personal Assistant to help support the day-to-day operations of both brands. This role requires someone who is detail-oriented, proactive, and comfortable managing multiple tasks in a fast-paced entrepreneurial environment.</p>
+
+          <h3>Responsibilities</h3>
+          <ul>
+            <li>Assist with email management and vendor communication</li>
+            <li>Help manage event applications and vendor approvals</li>
+            <li>Coordinate vendor invoices and payment tracking</li>
+            <li>Assist with event planning logistics and vendor organization</li>
+            <li>Help schedule and manage social media content and promotions</li>
+            <li>Assist with event marketing and outreach to potential vendors</li>
+            <li>Support preparation for upcoming markets and pop-up events</li>
+            <li>Help organize event materials and supplies</li>
+            <li>Assist with administrative tasks for Beaded For You Co. and Social Market Collective</li>
+            <li>Provide day-of event assistance when needed</li>
+          </ul>
+
+          <h3>Qualifications</h3>
+          <ul>
+            <li>Highly organized with strong attention to detail</li>
+            <li>Strong written communication skills</li>
+            <li>Comfortable using Google Docs, email, and social media platforms</li>
+            <li>Ability to manage multiple projects and deadlines</li>
+            <li>Self-motivated and proactive problem solver</li>
+            <li>Interest in small business, events, or marketing is a plus</li>
+          </ul>
+
+          <h3>Ideal Candidate</h3>
+          <p>This position is ideal for someone who enjoys working closely with a growing small business and wants hands-on experience in event planning, marketing, and small business operations.</p>
+        </div>
+        <button class="apply-btn" onclick="openModal('Personal Assistant')">Apply Now</button>
+      </div>
     </section>
 
     <footer>
@@ -74,6 +379,143 @@
     </footer>
   </main>
 
+  <!-- Application Modal -->
+  <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+      <h2 class="modal-title">Apply Now</h2>
+      <p class="modal-subtitle" id="modal-position-label"></p>
+
+      <form id="application-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="position" id="form-position">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last_name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City / Area *</label>
+          <input type="text" id="city" name="city" placeholder="e.g. Gurnee, Waukegan, Chicago" required>
+        </div>
+
+        <div class="form-group">
+          <label for="position-select">Position Applying For *</label>
+          <select id="position-select" name="position_applying_for" required>
+            <option value="">Select a position</option>
+            <option value="Event Support Team Member">Event Support Team Member</option>
+            <option value="Personal Assistant">Personal Assistant</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="heard">How did you hear about us?</label>
+          <select id="heard" name="how_did_you_hear">
+            <option value="">Select one</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Friend / Word of Mouth">Friend / Word of Mouth</option>
+            <option value="Attended an event">Attended an event</option>
+            <option value="Google / Search">Google / Search</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="availability">What is your general availability? *</label>
+          <textarea id="availability" name="availability" placeholder="e.g. Weekends, weekday evenings, flexible..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Relevant Experience</label>
+          <textarea id="experience" name="relevant_experience" placeholder="Tell us about any relevant work, volunteer, or event experience..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="why">Why are you interested in this position? *</label>
+          <textarea id="why" name="why_interested" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="portfolio">LinkedIn, Portfolio, or Resume Link (optional)</label>
+          <input type="url" id="portfolio" name="portfolio_link" placeholder="https://...">
+        </div>
+
+        <div class="form-group">
+          <label for="additional">Anything else you'd like us to know?</label>
+          <textarea id="additional" name="additional_info"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <p>Thank you for applying!</p>
+        <p>We've received your application and will be in touch if you're a good fit.</p>
+      </div>
+    </div>
+  </div>
+
   <script src="js/typewriter.js?v=3"></script>
+  <script>
+    function openModal(position) {
+      document.getElementById('modal-position-label').textContent = 'Applying for: ' + position;
+      document.getElementById('form-position').value = position;
+      var select = document.getElementById('position-select');
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === position) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modal-overlay')) closeModal();
+    }
+
+    document.getElementById('application-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again or email us directly.');
+        }
+      }).catch(function() {
+        alert('Something went wrong. Please try again or email us directly.');
+      });
+    });
+  </script>
 </body>
 </html>
