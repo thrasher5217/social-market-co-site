@@ -32,7 +32,6 @@
   var texts = [
     "The Social Market Co.",
     "Community · Creativity · Connection",
-    "shop local. gather often.",
   ];
   var speed = 60;
   var deleteSpeed = 30;
