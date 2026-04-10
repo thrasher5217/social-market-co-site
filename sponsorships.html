@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Explore sponsorship opportunities with The Social Market Co. Boost, Amplify, or Feature your brand at our Chicagoland artisan markets and events.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Sponsorship Opportunities — The Social Market Co.</title>
+  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/events.css?v=7">
+  <style>
+    /* ── Sponsorship Tiers ── */
+    .sponsorship-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .sponsor-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 36px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .sponsor-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+
+    .sponsor-badge {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .sponsor-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #d4a843, #f5d87a, #d4a843, #b8912e, #d4a843);
+      mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+    }
+
+    .sponsor-badge span {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    .sponsor-tier-name {
+      font-family: 'ivar-regular', serif;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #000;
+      margin-bottom: 4px;
+    }
+
+    .sponsor-price {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #c9a94e;
+      margin-bottom: 20px;
+    }
+
+    .sponsor-includes {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .sponsor-perks {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      text-align: left;
+    }
+
+    .sponsor-perks li {
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.55;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .sponsor-perks li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: #c9a94e;
+      font-weight: bold;
+    }
+
+    .sponsor-perks li:last-child {
+      border-bottom: none;
+    }
+
+    .sponsor-btn-soon {
+      display: inline-block;
+      margin-top: auto;
+      padding: 12px 28px;
+      background: #aaa;
+      color: #f6f5f0;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: default;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    .sponsor-divider {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, #d4a843, #f5d87a);
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    .sponsor-card--feature {
+      border-color: #c9a94e;
+    }
+
+    @media screen and (max-width: 900px) {
+      .sponsorship-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 543px) {
+      .sponsorship-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html" class="logo-typewriter-link"><span id="typewriter-text" class="logo-typewriter"></span><span class="logo-cursor">_</span></a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="vendor-signup.html">Vendor Applications</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="consultation.html">Event Consultation</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="sponsorships.html" class="nav-active">Sponsorships</a></li>
+          <li><a href="giveback.html">Giveback</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="events-section">
+      <h1 class="events-heading">Sponsorship Opportunities</h1>
+
+      <div class="sponsorship-grid">
+
+        <!-- Boost Sponsor -->
+        <div class="sponsor-card">
+          <div class="sponsor-badge"><span>Boost</span></div>
+          <h2 class="sponsor-tier-name">Boost Sponsor</h2>
+          <div class="sponsor-price">$100</div>
+          <hr class="sponsor-divider">
+          <p class="sponsor-includes">Includes:</p>
+          <ul class="sponsor-perks">
+            <li>1 Complimentary Vendor Booth ($65+ value)</li>
+            <li>Featured recognition on our boosted Facebook event page (seen by thousands locally)</li>
+            <li>1 Dedicated Social Media Spotlight Post (Instagram + Facebook)</li>
+            <li>Business tagged in event promotions + sponsor mentions</li>
+          </ul>
+          <span class="sponsor-btn-soon">Applications Opening Soon</span>
+        </div>
+
+        <!-- Amplify Sponsor -->
+        <div class="sponsor-card">
+          <div class="sponsor-badge"><span>Amplify</span></div>
+          <h2 class="sponsor-tier-name">Amplify Sponsor</h2>
+          <div class="sponsor-price">$250</div>
+          <hr class="sponsor-divider">
+          <p class="sponsor-includes">Everything in Boost, plus:</p>
+          <ul class="sponsor-perks">
+            <li>Logo placement on all event marketing graphics</li>
+            <li>Featured in email marketing campaigns to our vendor + customer list</li>
+            <li>2 Social Media Features (pre-event + event week)</li>
+            <li>Opportunity to include promo materials in event welcome/setup area</li>
+          </ul>
+          <span class="sponsor-btn-soon">Applications Opening Soon</span>
+        </div>
+
+        <!-- Feature Sponsor -->
+        <div class="sponsor-card sponsor-card--feature">
+          <div class="sponsor-badge"><span>Feature</span></div>
+          <h2 class="sponsor-tier-name">Feature Sponsor</h2>
+          <div class="sponsor-price">$500</div>
+          <hr class="sponsor-divider">
+          <p class="sponsor-includes">Everything in Amplify, plus:</p>
+          <ul class="sponsor-perks">
+            <li>Top-tier logo placement on all marketing + signage</li>
+            <li>Verbal recognition during the event</li>
+            <li>Option to display signage at entrance or high-traffic area</li>
+            <li>3–4 Social Media Features (including reels or priority placement)</li>
+            <li>Premium featured placement on our website for 12 months in our Featured Sponsors tab</li>
+          </ul>
+          <span class="sponsor-btn-soon">Applications Opening Soon</span>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/thesocialmarketco/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/p/The-Social-Market-Co-Events-61582446278117/" target="_blank" rel="noopener">Facebook</a>
+        <span class="copyright">©2025</span>
+      </div>
+      <div class="footer-credit">Created by <a href="https://northside-digital.com/" target="_blank" rel="noopener">Northside Digital</a></div>
+    </footer>
+  </main>
+
+  <script src="js/typewriter.js?v=4"></script>
+</body>
+</html>
