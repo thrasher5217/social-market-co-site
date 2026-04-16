@@ -117,19 +117,29 @@
       border-bottom: none;
     }
 
-    .sponsor-btn-soon {
-      display: inline-block;
-      margin-top: auto;
-      padding: 12px 28px;
-      background: #aaa;
-      color: #f6f5f0;
-      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: default;
-      pointer-events: none;
+    .sponsor-apply-wrap {
       text-align: center;
+      margin-top: 48px;
+    }
+
+    .sponsor-apply-btn {
+      display: inline-block;
+      padding: 18px 56px;
+      background: linear-gradient(135deg, #c9a94e, #d4a843, #b8912e);
+      color: #fff;
+      font-family: 'graphik-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+      box-shadow: 0 4px 16px rgba(201, 169, 78, 0.25);
+    }
+
+    .sponsor-apply-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201, 169, 78, 0.35);
+      background: linear-gradient(135deg, #d4a843, #e0be5a, #c9a94e);
     }
 
     .sponsor-divider {
@@ -203,7 +213,7 @@
             <li>1 Dedicated Social Media Spotlight Post (Instagram + Facebook)</li>
             <li>Business tagged in event promotions + sponsor mentions</li>
           </ul>
-          <span class="sponsor-btn-soon">Applications Opening Soon</span>
+
         </div>
 
         <!-- Amplify Sponsor -->
@@ -239,6 +249,10 @@
           <span class="sponsor-btn-soon">Applications Opening Soon</span>
         </div>
 
+      </div>
+
+      <div class="sponsor-apply-wrap">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScnkAsdFdKJvvGFXZZEbmxzsgBMeGs8xr1sxfmbcpyr30exNw/viewform" target="_blank" rel="noopener" class="sponsor-apply-btn" id="sponsor-apply-btn">Apply for Sponsorship</a>
       </div>
     </section>
 
